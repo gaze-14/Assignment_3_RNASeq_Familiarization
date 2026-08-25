@@ -13,11 +13,11 @@ Assigned Topic: Hypoxia
 | Ann Marielle U. Dael| Interpretation lead |
 | Dave Lister F. Romano | Datalead
 | Isabella Tuble | Galaxy Lead |
-| Angela B. villegas | Literature lead |
+| Angela B. Villegas | Literature lead |
 
 ## Selected Paper
 
-**Title:**  RNA-seq and qRT-PCR analyses reveal the physiological response to acute hypoxia and reoxygenation in Epinephelus coioides
+**Title:**  RNA-seq and qRT-PCR analyses reveal the physiological response to acute hypoxia and reoxygenation in *Epinephelus coioides*
 
 **Authors:**  Xingxing Lai, Zhongxuan Zhong, Bing Lin, Yuxin Wu, Yonghao Ma, Cuiping Zhang, Yang Yang, Mingqing Zhang, Weijian Qin, Xiaoqin Fu, and Hu Shu
 
