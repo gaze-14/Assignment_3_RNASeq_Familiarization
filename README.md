@@ -11,7 +11,7 @@ Assigned Topic: Hypoxia
 |---|---|
 | Gaze Everly M. Abrasaldo| Documentation Lead |
 | Ann Marielle U. Dael| Interpretation lead |
-| Dave Lister F. Romano | Datalead
+| Dave Lister F. Romano | Data Lead |
 | Isabella Tuble | Galaxy Lead |
 | Angela B. Villegas | Literature lead |
 
