@@ -26,3 +26,17 @@ Assigned Topic: Hypoxia
 **Journal:**  Frontiers in Physiology
 
 **DOI/Link:** https://doi.org/10.3389/fphys.2022.1049776
+
+## Organism and Tissue
+
+**Organism:** Orange-spotted grouper *Epinephelus coioides*
+
+**Tissue:** Muscle tissue
+
+## Experimental Conditions
+
+**Control:** Normoxic control (CM), with dissolved oxygen (DO) maintained at 6.0 ± 0.1 mg/L
+
+**Treatment:** Acute hypoxia at 0.6 ± 0.1 mg/L DO. Fish were classified as hypoxia-tolerant (EMS) or hypoxia-sensitive (EMW) based on their physiological response. Reoxygenation was subsequently performed at 6.0 ± 0.1 mg/L DO.
+
+## RNA-Seq Accession Numbers
