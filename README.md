@@ -40,3 +40,63 @@ Assigned Topic: Hypoxia
 **Treatment:** Acute hypoxia at 0.6 ± 0.1 mg/L DO. Fish were classified as hypoxia-tolerant (EMS) or hypoxia-sensitive (EMW) based on their physiological response. Reoxygenation was subsequently performed at 6.0 ± 0.1 mg/L DO.
 
 ## RNA-Seq Accession Numbers
+
+## BioProject ##
+
+PRJNA895010
+
+## Selected runs (4 samples) ##
+
+- SRR22065105 (CM1 – Sensitive)
+  
+- SRR22065108 (EMS – Tolerant)
+  
+- SRR22065111 (EMW – Control 1)
+  
+- SRR22065112 (CM2 – Control 2)
+
+## Reference genome and annotation versions
+
+Reference genome: *Epinephelus coioides*, NCBI Assembly GCA_051314025.1
+
+Annotation file: GTF (NCBI release 106), downloaded from NCBI
+
+## Original authors’ pipeline
+
+- Sequencing: Illumina RNA-seq
+  
+- Alignment: TopHat2 v2.0.4
+  
+- Counting: featureCounts
+  
+- Differential expression: DESeq2
+  
+- Annotation: NCBI genome + GTF
+  
+- Functional enrichment: GO/KEGG pathway analysis
+
+## Galaxy pipeline used by the group
+
+- Data import: NCBI SRA → SRR22065105 (Sensitive), SRR22065108 (Tolerant), SRR22065111 (Control 1), SRR22065112 (Control 2)
+  
+- Quality control: FastQC + MultiQC
+  
+- Read trimming: none (reads passed QC)
+  
+- Reference genome: *Epinephelus coioides*, NCBI Assembly GCA_051314025.1
+  
+- Annotation file: GTF (NCBI release 106, matched to genome assembly)
+  
+- Read alignment: HISAT2 (splice-aware aligner)
+  
+- Gene counting: featureCounts (paired-end fragment counting, GTF annotation)
+  
+- Differential expression: DESeq2 (Control vs Hypoxia conditions)
+  
+- Annotation: Added gene names/functions from NCBI
+  
+- Visualization: Volcano plot, MA plot, PCA, heatmap (DESeq2 outputs)
+
+## Differences between the authors' pipeline and the group's pipeline
+
+
