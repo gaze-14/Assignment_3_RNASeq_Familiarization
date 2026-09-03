@@ -195,3 +195,31 @@ Annotation file: GTF (NCBI release 106), downloaded from NCBI
 | LDH-A | +1.8 | 0.004 | Upregulated | Converts pyruvate to lactate and supports anaerobic metabolism under hypoxia |
 | PHD-2 | −1.5 | 0.02 | Downregulated | Hydroxylates HIF-1α for degradation; reduced activity helps stabilize HIF-1α |
 | VEGFA | +2.4 | 0.003 | Upregulated | Promotes angiogenesis to improve oxygen delivery |
+
+## Comparison with Published Results
+
+- Authors’ pipeline used STAR for alignment, featureCounts for quantification, and DESeq2 for differential expression, followed by GO/KEGG enrichment.
+- Group pipeline used HISAT2 (instead of STAR), featureCounts, DESeq2, and KEGG enrichment.
+- Both pipelines identified hypoxia-responsive genes (e.g., HIF-1α, LDH-A, VEGFA).
+- The published study emphasized pathway enrichment (HIF-1 signaling, glycolysis), while the group focused more on QC, mapping statistics, and DESeq2 plots.
+- Overall, the biological conclusions are consistent: hypoxia triggers metabolic shifts, angiogenesis, and stress survival pathways.
+
+## Limitations
+
+- Tool availability: Galaxy offered HISAT2 instead of STAR, which may slightly affect alignment sensitivity.
+- Annotation completeness: Reference genome and GTF annotation for *Epinephelus coioides* may be less curated than human/mouse, leading to unmapped or unannotated reads.
+- Functional analysis: Group did not fully run GO enrichment due to annotation file format issues, limiting pathway-level interpretation.
+- Sample QC variation: EMS1 showed mild adapter contamination and duplication, which may bias downstream results.
+- Computational constraints: Galaxy’s interface restricted some custom filtering and visualization compared to command-line workflows.
+
+## Group Conclusion
+
+The workflow successfully processed RNA-seq data from raw reads to DEGs using Galaxy.
+
+QC confirmed overall high sequencing quality, with minor issues in EMS1.
+
+HISAT2 mapping achieved strong alignment rates (~80–90%), supporting reliable quantification.
+
+DESeq2 identified clear sets of hypoxia-responsive genes, consistent with published findings.
+
+Despite tool and annotation limitations, the group demonstrated that Galaxy can reproduce key biological insights: *Epinephelus coioides* adapts to hypoxia by stabilizing HIF-1α, shifting metabolism toward anaerobic pathways, promoting angiogenesis, and enhancing cell survival.
