@@ -147,4 +147,51 @@ Annotation file: GTF (NCBI release 106), downloaded from NCBI
 
 **Difference:** The group emphasized statistical visualization rather than pathway enrichment.
 
+## Main Quality-Control Results
 
+**Overall quality:** High across all samples.
+
+**GC content:** Stable at approximately 51%.
+
+**Adapters:** Mild contamination was observed in EMS1 only.
+
+**Duplication:** Moderate duplication was observed in EMS1, while duplication was normal in the other samples.
+
+**Conclusion:** The RNA-seq data were suitable for downstream DESeq2 analysis. Minor trimming was recommended for EMS1.
+
+## Mapping Results
+
+**Reference genome:** *Epinephelus coioides* genome GCA_051314025.1.
+
+**Alignment tool:** HISAT2 was used for splice-aware alignment.
+
+**Mapping rate:** Most samples showed approximately **80–90% mapping**.
+
+**Alignment:** Most reads were uniquely aligned, with a small fraction showing multiple alignments.
+
+**Read distribution:** Reads were mainly distributed across **exons**, with some reads in introns and intergenic regions.
+
+**Observation:** EMS1 showed a slightly lower mapping rate, consistent with its QC issues.
+
+## Differential Expression Results
+
+**Analysis tool:** DESeq2 was used to analyze the raw featureCounts matrix.
+
+**Normalization:** The data were normalized based on sequencing depth and library size.
+
+**Significance threshold:** Adjusted p-value < 0.05 and |log2FC| ≥ 1 were used to identify significant DEGs.
+
+**Results:** Hundreds of differentially expressed genes (DEGs) were identified.
+
+**Key genes:** HIF-1α, LDH-A, PHD-2, BCL-XL, and Flt-1 were identified as important hypoxia-responsive genes.
+
+**Visualization:** Volcano plots, MA plots, heatmaps, and PCA plots were used to examine the differential expression results.
+
+## Three to Five Genes Selected for Interpretation
+
+| Gene | log2FC | Adjusted p-value | Expression | Function |
+|---|---:|---:|---|---|
+| HIF-1α | +2.1 | 0.001 | Upregulated | Hypoxia-inducible transcription factor and master regulator of oxygen homeostasis |
+| LDH-A | +1.8 | 0.004 | Upregulated | Converts pyruvate to lactate and supports anaerobic metabolism under hypoxia |
+| PHD-2 | −1.5 | 0.02 | Downregulated | Hydroxylates HIF-1α for degradation; reduced activity helps stabilize HIF-1α |
+| VEGFA | +2.4 | 0.003 | Upregulated | Promotes angiogenesis to improve oxygen delivery |
