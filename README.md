@@ -99,4 +99,52 @@ Annotation file: GTF (NCBI release 106), downloaded from NCBI
 
 ## Differences between the authors' pipeline and the group's pipeline
 
+**Read Alignment**
+
+**Authors:** STAR (splice-aware aligner)
+
+**Group:** HISAT2 (splice-aware aligner available in Galaxy)
+
+**Difference:** Both detect splice junctions, but STAR was the original choice; HISAT2 was used by the group.
+
+## Counting
+
+**Authors:** featureCounts
+
+**Group:** featureCounts
+
+**Difference:** The same tool was used.
+
+## Differential Expression
+
+**Authors:** DESeq2
+
+**Group:** DESeq2
+
+**Difference:** The same tool was used.
+
+## Reference Genome
+
+**Authors:** NCBI genome assembly used in the study.
+
+**Group:** *Epinephelus coioides* genome GCA_051314025.1, GTF release 106.
+
+**Difference:** The genome version may differ depending on updates.
+
+## Functional Analysis
+
+**Authors:** GO and KEGG enrichment.
+
+**Group:** DESeq2 plots and gene-level annotation.
+
+**Difference:** The authors extended the analysis to pathway enrichment, while the group focused on gene-level interpretation.
+
+## Visualization
+
+**Authors:** Enriched pathways and biological responses.
+
+**Group:** Volcano plot, MA plot, PCA, and heatmap.
+
+**Difference:** The group emphasized statistical visualization rather than pathway enrichment.
+
 
