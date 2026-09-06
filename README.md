@@ -212,6 +212,56 @@ Annotation file: GTF (NCBI release 106), downloaded from NCBI
 - Sample QC variation: EMS1 showed mild adapter contamination and duplication, which may bias downstream results.
 - Computational constraints: Galaxy’s interface restricted some custom filtering and visualization compared to command-line workflows.
 
+## Figures and Tables
+
+<img width="958" height="425" alt="1000062413" src="https://github.com/user-attachments/assets/69682df8-3723-4837-ace0-c896147929ac" />
+Figure 1. MultiQC summary of the quality control results for the selected RNA-seq samples.
+
+## Read Mapping Summary
+
+| Sample | Total Reads | Percentage Mapped | Percentage Uniquely Mapped | Remarks |
+|---|---:|---:|---:|---|
+| SRR22065111 | 56,224,804 | 93.49% | 80.49% | EMS1 showed slightly reduced mapping compared with the other samples |
+| SRR22065112 | 48,740,042 | 92.01% | 77.71% | EMS1 showed slightly reduced mapping compared with the other samples |
+| SRR22065105 | 53,579,772 | 93.56% | 80.26% | EMS1 showed slightly reduced mapping compared with the other samples |
+| SRR22065108 | 53,574,682 | 92.09% | 77.55% | EMS1 showed slightly reduced mapping compared with the other samples |
+
+## Count Reads per Gene
+
+The complete featureCounts output contained thousands of genes, with each gene represented by its corresponding gene ID and read count for each sample.
+
+| Genes | Control_1 | Control_2 | Sensitive | Tolerant |
+| :--- | :---: | :---: | :---: | :---: |
+| ABVT39_007114 | 18 | 16 | 3 | 11 |
+| ABVT39_011093 | 1 | 1 | 0 | 2 |
+| ABVT39_006845 | 0 | 0 | 0 | 0 |
+| ABVT39_019025 | 18 | 18 | 17 | 25 |
+| ABVT39_010973 | 0 | 0 | 0 | 0 |
+| ABVT39_002942 | 0 | 0 | 10 | 3 |
+| ABVT39_023108 | 0 | 1 | 0 | 0 |
+| ABVT39_021388 | 0 | 0 | 1 | 0 |
+| ABVT39_016888 | 4208 | 2697 | 2505 | 3829 |
+| ABVT39_002959 | 123 | 85 | 117 | 151 |
+
+## DESeq2 results or relevant plots
+
+## Exported Galaxy workflow
+
+## Comparison Table
+
+| Analysis Step | Original Authors | Our Galaxy Re-analysis |
+| :--- | :--- | :--- |
+| **RNA-seq dataset** | 9 cDNA libraries: CM-3, EMS-3, and EMW-3; 3 biological replicates per group | NCBI SRA → SRR22065105 (Sensitive), SRR22065108 (Tolerant), SRR22065111 (Control 1), SRR22065112 (Control 2) |
+| **Quality control** | Q20, Q30, GC content, and error rate | FastQC + MultiQC |
+| **Trimming** | Fastp v0.12 | None (reads passed QC) |
+| **Reference genome** | *Epinephelus coioides* genome | *Epinephelus coioides*, NCBI Assembly GCA_051314025.1 |
+| **Annotation** | GOATOOLS v0.6.5 and KOBAS v2.1 | GTF (NCBI release 106, matched to genome assembly) |
+| **RNA-seq aligner** | TOPHAT2 v2.0.4 | HISAT2 (splice-aware aligner) |
+| **Gene counting** | RPKM | FeatureCounts (paired-end fragment counting, GTF annotation) |
+| **Differential expression** | DESeq2; 277 DEGs | DESeq2 (Control vs Hypoxia conditions) |
+| **Significance threshold** | \|log2FC\| > 1; FDR < 0.05 | Adjusted p-value < 0.05 and \|log2FC\| ≥ 1 were used to identify significant DEGs. |
+| **Main genes/pathways identified** | HIF-1α, FIH-1, PHD-2, PPARα, BCL-XL, LDH-A, Flt-1; HIF-1 signaling, glycolysis/gluconeogenesis, apoptosis, FOXO, MAPK, NF-κB, and VEGF pathways | HIF-1α, LDH-A, PHD-2, BCL-XL, and Flt-1 were identified as important hypoxia-responsive genes. |
+
 ## Group Conclusion
 
 The workflow successfully processed RNA-seq data from raw reads to DEGs using Galaxy.
