@@ -194,7 +194,7 @@ Annotation file: GTF (NCBI release 106), downloaded from NCBI
 | HIF-1α | +2.1 | 0.001 | Upregulated | Hypoxia-inducible transcription factor and master regulator of oxygen homeostasis |
 | LDH-A | +1.8 | 0.004 | Upregulated | Converts pyruvate to lactate and supports anaerobic metabolism under hypoxia |
 | PHD-2 | −1.5 | 0.02 | Downregulated | Hydroxylates HIF-1α for degradation; reduced activity helps stabilize HIF-1α |
-| VEGFA | +2.4 | 0.003 | Upregulated | Promotes angiogenesis to improve oxygen delivery |
+| VEGFA | +2.4 | 0.003 | Upregulated | Vascular endothelial growth factor and Promotes angiogenesis to improve oxygen delivery |
 
 ## Comparison with Published Results
 
