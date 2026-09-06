@@ -245,7 +245,15 @@ The complete featureCounts output contained thousands of genes, with each gene r
 
 ## DESeq2 results or relevant plots
 
+<img width="1410" height="853" alt="att 34kxC6R5wm19QrixUt0Dq0iAXVvwz8Lfjd7k1-9vsdQ" src="https://github.com/user-attachments/assets/8ff5b5ce-01ca-4219-a86f-9dbbc5319e4d" />
+
+**Figure 2. DESeq2 Result Table for Control vs Hypoxia**
+
 ## Exported Galaxy workflow
+
+<img width="720" height="1151" alt="att 6C9Rp5xlrF1ceFoJRQtLO9lNr4TYZPxrD6eck0tqZO0 png" src="https://github.com/user-attachments/assets/aee332d6-5e07-4a6a-a6cf-222e33a92235" />
+
+**Figure 3. GROUP2_HYPOXIA_WORKFLOW in Galaxy**
 
 ## Comparison Table
 
